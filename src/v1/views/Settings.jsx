@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {AiFillSetting} from "react-icons/ai";
-import ConvertToDate, {ConvertToDateString} from "../utils/covertToDate";
+import {ConvertToDateString} from "../utils/covertToDate";
 import List from "../components/body/List";
-import {vendorListItems, vendorSettingsListItems} from "../constants/constant";
+import {vendorSettingsListItems} from "../constants/constant";
 
 const Settings = () => {
     const [index, setIndex] = useState(0);

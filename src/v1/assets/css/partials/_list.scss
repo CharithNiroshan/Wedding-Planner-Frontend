@@ -5,36 +5,30 @@
   &-item {
     margin: 15px;
     border-radius: 6px;
-
-    & a {
-      color: $theme-color;
-    }
+    color: $theme-color;
+    cursor: pointer;
 
     &-text {
       font-size: 14px;
       margin-bottom: 0;
     }
 
-    & svg{
+    & svg {
       font-size: 18px;
       margin-right: 20px;
     }
 
-    &:hover{
+    &:hover {
       background-color: $light-grey;
     }
   }
 
-  &-item-selected{
+  &-item-selected {
     background-color: $theme-color;
     cursor: text;
+    color: white;
 
-    & a {
-      color: white;
-      cursor: text;
-    }
-
-    &:hover{
+    &:hover {
       background-color: $theme-color;
     }
   }
