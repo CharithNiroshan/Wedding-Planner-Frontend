@@ -1,0 +1,45 @@
+.home {
+  &-banner {
+    position: relative;
+    height: 400px;
+    background-image: url("../../images/background-img.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &-content {
+      width: 75%;
+      margin: 0 auto;
+      z-index: 2;
+
+      &-text {
+        text-align: center;
+        color: #03b6ff;
+        font-size: 40px;
+        margin-bottom: 10px;
+        z-index: 2 !important;
+      }
+
+      &-sub-text {
+        color: #f3f3f3;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

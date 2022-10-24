@@ -1,0 +1,29 @@
+.user-profile{
+  background-color: white;
+  padding: 30px 40px;
+  min-height: 400px;
+
+  &-section{
+    margin-bottom: 15px;
+
+    &-label{
+      font-size: 15px;
+      font-weight: 400;
+      color: #313030;
+      width: 170px;
+      margin-right: 20px;
+    }
+
+    &-value{
+      font-size: 15px;
+      font-weight: 400;
+      color: #4b4b4b;
+      margin-bottom: 0 !important;
+    }
+
+    &-avatar{
+      width: 120px !important;
+      height: 120px !important;
+    }
+  }
+}

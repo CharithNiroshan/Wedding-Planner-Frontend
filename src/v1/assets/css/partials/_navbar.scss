@@ -1,0 +1,115 @@
+.navbar {
+  background-color: $theme-color;
+
+  &-logo {
+    height: 60px;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  &-list {
+    margin-bottom: 0 !important;
+    list-style: none;
+
+    &-item {
+      margin: 0 10px;
+      font-size: 13px;
+
+      & a {
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-profile-image {
+    width: 45px;
+    margin: 0 15px;
+  }
+
+  &-icon {
+    color: white;
+    width: 45px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    display: none !important;
+  }
+
+  &-drawer {
+    &-top {
+      background-color: $theme-color;
+
+      &-buttons * {
+        display: none !important;
+      }
+    }
+
+    &-list {
+      list-style: none;
+      padding-left: 0;
+
+      &-item{
+        padding: 18px;
+        margin: 15px;
+        border-radius: 6px;
+
+        &-text {
+          color: $theme-color !important;
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+
+        & svg{
+          color: $theme-color !important;
+          font-size: 18px;
+          margin-right: 20px;
+        }
+
+        &:hover{
+          background-color: $light-grey;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    &-logo {
+      height: 55px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    &-logo {
+      height: 50px;
+    }
+
+    &-list * {
+      display: none !important;
+    }
+
+    &-profile-image {
+      display: none !important;
+    }
+
+    &-icon {
+      display: block !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar-buttons {
+    & .button {
+      display: none !important;
+    }
+  }
+
+  .navbar-drawer-top-buttons * {
+    display: flex !important;
+  }
+}

@@ -1,0 +1,25 @@
+.slider {
+  width: 100%;
+
+  &-container {
+    overflow-x: hidden;
+    width: calc(100% - 68px);
+
+    &-div {
+      width: fit-content;
+      min-width: 100%;
+      transition: transform 0.4s ease-in;
+    }
+  }
+
+  &-arrow {
+    min-width: 34px;
+    color: $theme-color;
+
+    & .MuiSvgIcon-root {
+      cursor: pointer;
+      margin-left: 0;
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.user-home{
+  &-search-box{
+    width: 92%;
+    margin:40px auto 0 auto;
+  }
+
+  &-bottom {
+    width: 92%;
+    margin: 40px auto;
+  }
+
+  &-section {
+    background-color: white;
+    padding: 40px 20px;
+
+    &-content {
+      width: 94% !important;
+      margin: 0 auto;
+    }
+  }
+}

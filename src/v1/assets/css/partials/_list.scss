@@ -1,0 +1,41 @@
+.list {
+  list-style: none;
+  padding-left: 0;
+
+  &-item {
+    margin: 15px;
+    border-radius: 6px;
+
+    & a {
+      color: $theme-color;
+    }
+
+    &-text {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    & svg{
+      font-size: 18px;
+      margin-right: 20px;
+    }
+
+    &:hover{
+      background-color: $light-grey;
+    }
+  }
+
+  &-item-selected{
+    background-color: $theme-color;
+    cursor: text;
+
+    & a {
+      color: white;
+      cursor: text;
+    }
+
+    &:hover{
+      background-color: $theme-color;
+    }
+  }
+}

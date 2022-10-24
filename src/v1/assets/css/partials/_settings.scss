@@ -1,0 +1,18 @@
+.settings{
+  width: 95%;
+  margin: 30px auto;
+
+  &-bottom{
+    background-color: white;
+    padding: 20px 0;
+
+    &-left{
+      min-width: 300px;
+      border-right: 1px solid $theme-color;
+    }
+
+    &-right{
+      padding: 30px 40px;
+    }
+  }
+}

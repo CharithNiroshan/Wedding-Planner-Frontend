@@ -1,0 +1,28 @@
+.booking-card {
+  background-color: white;
+  padding: 20px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: rgba(9, 30, 66, 0.25) 0 1px 1px, rgba(9, 30, 66, 0.13) 0 0 1px 1px;
+
+  &:hover{
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+  }
+
+  &-image {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: 20px;
+  }
+
+  &-title {
+    font-size: 17px;
+    color: $theme-color;
+  }
+
+  &-sub-title {
+    font-size: 15px;
+    font-weight: 400;
+    color: #252525;
+  }
+}

@@ -1,0 +1,29 @@
+.booking {
+  width: 95%;
+  margin: 30px auto;
+
+  &-top {
+    background-color: white;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+
+    &-title{
+      font-size: 20px;
+    }
+  }
+
+  &-section{
+    background-color: white;
+    padding: 20px;
+
+    &-title{
+      font-size: 19px;
+    }
+  }
+
+  &-link{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 8px;
+  }
+}

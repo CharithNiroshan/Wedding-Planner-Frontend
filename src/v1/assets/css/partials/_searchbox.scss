@@ -1,0 +1,55 @@
+.search-box {
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  & .MuiFormControl-root {
+    width: 100% !important;
+    height: 50px !important;
+    border-color: white !important;
+    font-size: 15px !important;
+
+    & .MuiFormLabel-root {
+      color: white !important;
+      font-size: 15px !important;
+    }
+
+    & .MuiInputBase-root {
+      color: white !important;
+      font-size: 15px !important;
+
+      &::before {
+        border-bottom-color: white !important;
+      }
+
+      &::after {
+        border-bottom: none !important;
+      }
+    }
+
+    & .MuiSelect-icon {
+      color: white !important
+    }
+  }
+
+  &-button{
+    background-color: #25b4e5 !important;
+    border-radius: 8px !important;
+    height: 50px !important;
+    cursor: pointer !important;
+
+    &-icon {
+      font-size: 25px !important;
+      margin-right: 10px;
+      color: white !important;
+    }
+
+    &-text{
+      font-size: 15px;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+

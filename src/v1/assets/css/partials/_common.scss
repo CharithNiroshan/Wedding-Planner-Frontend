@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.client {
+  width: 100%;
+  height: 100%;
+  background-color: #F3F3F6;
+}
+
+.disable-client {
+  height: 100vh !important;
+  overflow-y: hidden;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 300;
+  background-color: #fafafa;
+}
+
+.form-select {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 300;
+  background-color: #fafafa;
+}
+
+.form-label {
+  width: 100%;
+  font-size: 16px;
+  color: #252c41;
+  font-weight: 300;
+}
+
+.form-check {
+  &-container {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+    background-color: #fafafa;
+    overflow-y: auto;
+  }
+
+  &-input {
+    cursor: pointer;
+  }
+
+  &-label {
+    color: #252c41;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 8px;
+  }
+}
+
+.radio-container {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 5px;
+  background-color: #fafafa;
+  overflow-y: auto;
+}
+
+.nav {
+  &-link {
+    color: $theme-color !important;
+  }
+}
+
+.MuiSnackbar-root {
+  justify-content: start !important;
+}
+
+.MuiAlert-icon{
+  color: white !important;
+}
+
+.MuiAlert-message{
+  color: white !important;
+}
+
+.MuiAlert-standardWarning {
+  background-color: rgb(237, 108, 2) !important;
+}
+
+.MuiAlert-standardError {
+  background-color: rgb(211, 47, 47) !important;
+}
+
+.MuiAlert-standardSuccess {
+  background-color: rgb(46, 125, 50) !important;
+}

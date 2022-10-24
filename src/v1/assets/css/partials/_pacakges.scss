@@ -1,0 +1,92 @@
+.packages {
+  &-text {
+    font-size: 15px;
+    color: #252525;
+    font-weight: 400;
+    margin-right: 20px;
+  }
+
+  &-bottom {
+    width: 900px;
+    overflow-x: scroll;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0, rgba(0, 0, 0, 0.08) 0 0 0 1px;
+
+    & table {
+      width: max-content;
+      margin-bottom: 0 !important;
+    }
+
+    & thead {
+      background-color: #eeeeee;
+
+      & th {
+        font-size: 15px;
+        padding: 10px 0;
+        color: #181818;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: none !important;
+      }
+    }
+
+    & tbody {
+      & td {
+        padding: 15px 20px;
+      }
+    }
+  }
+
+  &-table {
+    &-title {
+      font-size: 16px;
+      color: #181818;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    &-des{
+      width: 400px;
+      font-size: 15px;
+      color: #3a3a3a;
+      font-weight: 400;
+    }
+
+    &-service{
+      font-size: 15px;
+      color: #3a3a3a;
+      font-weight: 400;
+      margin-bottom: 2px;
+    }
+
+    &-image{
+      width: 350px;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-price{
+      font-size: 15px;
+      color: #3a3a3a;
+      font-weight: 400;
+    }
+
+    &-edit-button{
+      margin-right: 20px !important;
+
+      & svg{
+        font-size: 20px !important;
+        margin-right: 0 !important;
+      }
+    }
+
+    &-delete-button{
+      & svg{
+        font-size: 20px !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+}

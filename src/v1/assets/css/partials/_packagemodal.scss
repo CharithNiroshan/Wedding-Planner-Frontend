@@ -1,0 +1,10 @@
+.package-modal{
+  & .modal-dialog{
+    max-width: 650px !important;
+  }
+
+  &-body{
+    margin: 20px auto 40px auto;
+    width: 90%;
+  }
+}

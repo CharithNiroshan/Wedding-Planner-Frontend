@@ -1,0 +1,41 @@
+.vendor-profile {
+  background-color: white;
+  padding: 30px 40px;
+  min-height: 500px;
+}
+
+.tab-bar {
+  &-tab{
+    &-text {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0 !important;
+      margin-left: 10px;
+    }
+  }
+}
+
+#tab-bar-tab-active {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: $theme-color;
+  color: white;
+  border-radius: 8px 8px 0 0;
+
+  & svg {
+    font-size: 20px !important;
+  }
+}
+
+#tab-bar-tab-non-active {
+  width: 100%;
+  padding: 10px 20px;
+  color: $theme-color;
+  font-weight: 400;
+  cursor: pointer;
+  border-bottom: 1px solid $theme-color;
+
+  & svg {
+    font-size: 18px !important;
+  }
+}

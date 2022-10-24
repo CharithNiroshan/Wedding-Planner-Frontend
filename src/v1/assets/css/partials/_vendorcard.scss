@@ -1,0 +1,72 @@
+.vendor-card {
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: end;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 6px 0 rgb(0 0 0 / 25%),
+  }
+
+  &-logo {
+    position: absolute !important;
+    width: 25% !important;
+    height: 80px !important;
+    top: 110px;
+    left: 37.5%;
+  }
+
+  &-content {
+    padding: 60px 12px 12px 12px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+
+    &-title {
+      text-align: center;
+      color: white;
+      font-size: 18px !important;
+    }
+
+    &-category {
+      text-align: center;
+      color: #24b5e5;
+      font-size: 15px !important;
+      margin-bottom: 8px !important;
+    }
+
+    &-text {
+      text-align: center;
+      color: white !important;
+      font-size: 13px;
+    }
+
+    &-rating {
+      align-items: center;
+      justify-content: center;
+
+      & .MuiRating-root {
+        font-size: 18px;
+        color: white !important;
+        margin-right: 10px;
+      }
+
+      & .MuiTypography-root {
+        color: white !important;
+        font-size: 13px;
+      }
+    }
+  }
+
+  &:hover{
+    .vendor-card-content{
+      background-color: rgba(0,0,0,0.75);
+    }
+  }
+}
+
+
+

@@ -1,0 +1,16 @@
+.no-result {
+  width: 100%;
+  min-height: 400px;
+
+  &-image{
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+
+  &-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #3d3d3d;
+  }
+}

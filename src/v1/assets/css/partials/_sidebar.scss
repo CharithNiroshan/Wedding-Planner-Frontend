@@ -1,0 +1,45 @@
+.sidebar {
+  &-left {
+    min-width: 350px;
+    background-color: white;
+
+    &-image {
+      width: 125px !important;
+      height: 125px !important;
+      margin-bottom: 15px;
+    }
+
+    &-name {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    &-email {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+  }
+
+  &-right {
+    padding: 20px;
+
+    &-top {
+      padding: 10px 30px;
+      background-color: white;
+      margin-bottom: 20px;
+
+      &-title {
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 0 !important;
+      }
+
+      &-date {
+        font-size: 15px;
+        color: #3b3b3b;
+        font-weight: 400;
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+export const checkout_fields = {
+    usrName: "usrName",
+    pwd: "pwd",
+    confirmPwd: "confirmPwd",
+    prfImgUrl: "prfImgUrl",
+    fullName: "fullName",
+    disName: "disName",
+    email: 'email',
+    cntNo: "cntNo",
+    logoUrl: "logoUrl",
+    title: "title",
+    category: "category",
+    des: "des",
+    coverPhotoUrl: "coverPhotoUrl",
+    address: "address",
+    district: "district",
+    services: "services",
+    ratingDes: "ratingDes",
+    bookingType: "bookingType",
+    bookingDate: "bookingDate",
+    bookingPackage: "bookingPackage",
+    bookingServices: 'bookingServices',
+    extReq: "extReq",
+    packTitle: "packTitle",
+    packDes: "packDes",
+    packImgUrl: "packImgUrl",
+    packPrice: "packPrice",
+    packServices: "packServices"
+}
+
+

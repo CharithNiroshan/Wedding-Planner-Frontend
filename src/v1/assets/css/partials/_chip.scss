@@ -1,0 +1,27 @@
+.chip{
+  width: max-content;
+  padding: 12px 20px;
+  border-radius: 50px;
+  margin-right: 10px;
+  background-color: $theme-color;
+
+  &-text{
+    font-size: 13px;
+    font-weight: 400;
+    color: white;
+    text-align: center !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+#Pending{
+  background-color: #c78300;
+}
+
+#Rejected{
+  background-color: #930000;
+}
+
+#Accepted{
+  background-color: #03af03;
+}

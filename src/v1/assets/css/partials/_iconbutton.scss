@@ -1,0 +1,40 @@
+.button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: $button-primary;
+
+  & svg {
+    margin-right: 8px;
+  }
+}
+
+#secondary {
+  background-color: $button-secondary !important;
+}
+
+#tertiary {
+  background-color: $button-tertiary !important;
+}
+
+#text {
+  background-color: transparent !important;
+  color: $theme-color !important;
+  padding: 0 !important;
+}
+
+#warning {
+  background-color: #b00101 !important;
+}
+
+#disabled {
+  background-color: #E0E0E0 !important;
+  color: #605f5f !important;
+  cursor: default !important;
+}

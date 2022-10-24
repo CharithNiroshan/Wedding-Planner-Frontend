@@ -1,0 +1,25 @@
+.user-card {
+  &-image {
+    width: 125px !important;
+    height: 125px !important;
+    margin-bottom: 15px;
+  }
+
+  &-text {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  &-sub-text {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+}
+
+#dark {
+  color: $theme-color;
+}
+
+#light{
+  color: white;
+}
