@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import logo from "../../assets/images/logo.png";
 import {BsFillPersonFill} from "react-icons/bs";
 import {RiLoginBoxFill} from "react-icons/ri";
-import {AiOutlineMenu} from "react-icons/ai";
+import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import {BiLogOut} from "react-icons/bi";
 import {Offcanvas} from "react-bootstrap";
 import UserCard from "../body/UserCard";
@@ -31,7 +31,7 @@ const Header = () => {
                 <ul className="navbar-list d-flex align-items-center">
                     {
                         type === 1 ?
-                            vendorListItems?.map((item,index) =>
+                            vendorListItems?.map((item, index) =>
                                 <li className="navbar-list-item" key={index}>
                                     <Link to={`/${item.link}`}>{item.text}</Link>
                                 </li>
@@ -104,7 +104,7 @@ const Header = () => {
                                         text="Log Out"
                                         icon={<BiLogOut/>}
                                         type="secondary"
-                                        onClick={()=>{
+                                        onClick={() => {
                                             setShow(false);
                                             handleLogOut();
                                         }}
@@ -132,12 +132,13 @@ const Header = () => {
                                     </>
                             }
                         </div>
+                        <AiOutlineClose className="navbar-drawer-top-close-button" onClick={() => setShow(false)}/>
                     </div>
                     <ul className="navbar-drawer-list">
                         {
                             type === 1 ?
-                                vendorListItems?.map((item,index) =>
-                                    <Link to={`/${item.link}`} onClick={()=>setShow(false)} key={index}>
+                                vendorListItems?.map((item, index) =>
+                                    <Link to={`/${item.link}`} onClick={() => setShow(false)} key={index}>
                                         <li className="navbar-drawer-list-item d-flex align-items-center">
                                             {item?.icon}
                                             <h2 className="navbar-drawer-list-item-text flex-grow-1">{item?.text}</h2>
@@ -145,8 +146,8 @@ const Header = () => {
                                     </Link>
                                 )
                                 :
-                                guestListItems?.map((item,index) =>
-                                    <Link to={`/${item.link}`} onClick={()=>setShow(false)} key={index}>
+                                guestListItems?.map((item, index) =>
+                                    <Link to={`/${item.link}`} onClick={() => setShow(false)} key={index}>
                                         <li className="navbar-drawer-list-item d-flex align-items-center">
                                             {item?.icon}
                                             <h2 className="navbar-drawer-list-item-text flex-grow-1">{item?.text}</h2>

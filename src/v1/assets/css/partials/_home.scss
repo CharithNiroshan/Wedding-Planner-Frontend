@@ -43,3 +43,37 @@
     }
   }
 }
+
+@media only screen and (max-width: $layout-breakpoint-lg) {
+  .home {
+    &-banner {
+      height: 350px;
+    }
+  }
+}
+
+@media only screen and (max-width: $layout-breakpoint-md) {
+  .home {
+    &-banner {
+      height: 300px;
+
+      &-content{
+        &-text{
+          font-size: 25px;
+        }
+
+        &-sub-text{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $layout-breakpoint-sm) {
+  .home {
+    &-banner {
+      height: 250px;
+    }
+  }
+}

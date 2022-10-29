@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {Snackbar} from "@material-ui/core";
+import {IconButton, Snackbar} from "@material-ui/core";
 import {Alert} from "@material-ui/lab";
 import {alertTypes} from "./v1/constants/constant";
 import {setAlert} from "./v1/store/actions/common-actions";
@@ -36,6 +36,16 @@ const Client = () => {
         dispatch(setAlert(null))
     }
 
+    const action = (
+        <IconButton
+            size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={() => dispatch(setAlert(null))}
+        />
+    )
+
+
     return (
         <div className={isLoading ? "disable-client" : "client"}>
             {isLoading && <Loading/>}
@@ -62,7 +72,7 @@ const Client = () => {
             <Footer/>
             {
                 alert &&
-                <Snackbar open={true} autoHideDuration={4000} onClose={handleClose}>
+                <Snackbar open={true} autoHideDuration={4000} onClose={handleClose} action={action}>
                     <Alert severity={alertTypes[alert.type]}>{alert.message}</Alert>
                 </Snackbar>
             }

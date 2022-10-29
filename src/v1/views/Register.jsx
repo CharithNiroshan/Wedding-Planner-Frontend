@@ -5,20 +5,24 @@ import UserRegisterForm from "../components/body/UserRegisterForm";
 import VendorBasicInfoForm from "../components/body/VendorBasicInfoForm";
 import VendorContactInfoForm from "../components/body/VendorContactInfoForm";
 import VendorRegistrationForm03 from "../components/body/VendorServicesForm";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useLocation} from "react-router-dom";
+import {setAuthStep} from "../store/actions/auth-actions";
 
 const Register = () => {
+    const dispatch = useDispatch();
     const location = useLocation();
     const {authStep} = useSelector(state => state.auth);
 
-    useEffect(()=>{
-       console.log("Sds");
-    },[location])
+    useEffect(() => {
+        return () => {
+            dispatch(setAuthStep(0));
+        }
+    }, [dispatch, location])
 
     return (
         <AuthForm title="Welcome, please provide below details to register with us." texts={["login"]}>
-            {authStep === 0 && <RegisterForm />}
+            {authStep === 0 && <RegisterForm/>}
             {authStep === 1 && <UserRegisterForm/>}
             {authStep === 2 && <VendorBasicInfoForm/>}
             {authStep === 3 && <VendorContactInfoForm/>}

@@ -51,7 +51,7 @@ export const register = (history) => {
     }
 }
 
-export const signIn = (data, history) => {
+export const signIn = (data, history, navigateLink) => {
     return async (dispatch) => {
         dispatch(setIsLoading(true));
 
@@ -61,7 +61,12 @@ export const signIn = (data, history) => {
             if (res.data.success) {
                 dispatch(setAuth(res.data.data));
                 dispatch(setAlert({type: 0, message: "Login Successful."}));
-                history.push("/")
+                if (navigateLink === undefined) {
+                    history.push("/")
+                } else {
+                    history.push(navigateLink);
+                }
+
             } else {
                 dispatch(setAlert({type: 1, message: res.data.data.message}));
             }
@@ -74,7 +79,7 @@ export const signIn = (data, history) => {
 }
 
 export const forgetPassword = (data, history) => {
-    return async (dispatch)=>{
+    return async (dispatch) => {
         dispatch(setIsLoading(true));
 
         try {

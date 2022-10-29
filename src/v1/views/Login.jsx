@@ -13,13 +13,14 @@ const initialValues = {
     pwd: undefined,
 }
 
-const Login = () => {
+const Login = (props) => {
+    const {location} = props;
     const {errors, formData, onChange, onSubmit} = useForm(initialValues);
     const history = useHistory();
     const dispatch = useDispatch();
 
     const onValidated = async () => {
-        await dispatch(signIn(formData, history))
+        await dispatch(signIn(formData, history, location.state?.from))
     }
 
     return (

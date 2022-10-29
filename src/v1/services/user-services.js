@@ -4,7 +4,8 @@ import {setAlert, setBooking, setBookings, setIsLoading} from "../store/actions/
 import {setUser} from "../store/actions/auth-actions";
 
 export const addBooking = (venId, usrId, data, history) => {
-    return async (dispatch) => {
+    return async (dispatch, getState) => {
+        const {auth} = getState();
         dispatch(setIsLoading(true));
 
         const booking = {
@@ -14,11 +15,18 @@ export const addBooking = (venId, usrId, data, history) => {
         }
 
         try {
-            const res = await axios.post(`${configurations.baseUrl}/api/user/add-booking`, booking);
+            const res = await axios.post(`
+                ${configurations.baseUrl}/api/user/add-booking`,
+                booking,
+                {
+                    headers: {
+                        "Authorization": `Bearer ${auth.token}`
+                    }
+                }
+            );
             history.push("/bookings");
             dispatch(setAlert({type: 0, message: res.data.data.message}));
         } catch (err) {
-            console.log(err.message)
             dispatch(setAlert({type: 2, message: "Something went wrong. Please try again."}));
         } finally {
             dispatch(setIsLoading(false));
@@ -54,10 +62,19 @@ export const addReview = (venId, usrId, data, history) => {
 }
 
 export const fetchBookings = (id, type) => {
-    return async (dispatch) => {
+    return async (dispatch, getState) => {
+        const {auth} = getState();
+
         dispatch(setIsLoading(true));
         try {
-            const res = await axios.get(`${configurations.baseUrl}/api/user/get-bookings/${type}/${id}`);
+            const res = await axios.get(`
+            ${configurations.baseUrl}/api/user/get-bookings/${type}/${id}`,
+                {
+                    headers: {
+                        "Authorization": `Bearer ${auth.token}`
+                    }
+                }
+            );
             dispatch(setBookings(res.data.data.bookings));
         } catch (err) {
             console.log(err.response.data);
@@ -82,10 +99,12 @@ export const fetchBooking = (id) => {
 }
 
 export const updateUserProfile = (data) => {
-    return async (dispatch) => {
+    return async (dispatch, getState) => {
+        const {auth} = getState();
+
         dispatch(setIsLoading(true));
         try {
-            const res = await axios.put(`${configurations.baseUrl}/api/user/update-profile/6348f1aea53fc668579fcfb7`, data);
+            const res = await axios.put(`${configurations.baseUrl}/api/user/update-profile/${auth.user._id}`, data);
             dispatch(setUser(res.data.data.user));
             dispatch(setAlert({type: 0, message: res.data.data.message}));
         } catch (err) {

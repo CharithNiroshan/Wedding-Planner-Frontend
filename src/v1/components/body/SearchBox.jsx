@@ -19,7 +19,7 @@ function SearchBox() {
     });
 
     const handleSearch = () => {
-        if (searchValues.query.length !== 0) {
+        if (searchValues.query.length !== 0 || searchValues.district !== "" || searchValues.category !== "") {
             history.push(
                 `/search?query=${searchValues?.query}&categories=[${searchValues?.category}]&districts=[${searchValues?.district}]&sortByRating=false&sortByNoOfReviews=false`
             );
@@ -71,7 +71,7 @@ function SearchBox() {
             </Grid>
             <Grid item xs={12} md={12} lg={2}>
                 <IconButton
-                    type={searchValues.query === "" && "disabled"}
+                    type={searchValues.query.length !== 0 || searchValues.district !== "" || searchValues.category !== "" ? "default" : "disabled"}
                     className="mx-0"
                     text="Search Now"
                     icon={<Search/>}

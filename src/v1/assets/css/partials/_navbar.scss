@@ -38,18 +38,29 @@
 
   &-drawer {
     &-top {
+      position: relative;
       background-color: $theme-color;
 
       &-buttons * {
         display: none !important;
+      }
+
+      &-close-button {
+        cursor: pointer;
+        color: white !important;
+        position: absolute;
+        font-size: 30px;
+        top: 20px;
+        right: 20px;
       }
     }
 
     &-list {
       list-style: none;
       padding-left: 0;
+      overflow-y: scroll;
 
-      &-item{
+      &-item {
         padding: 18px;
         margin: 15px;
         border-radius: 6px;
@@ -60,13 +71,13 @@
           margin-bottom: 0;
         }
 
-        & svg{
+        & svg {
           color: $theme-color !important;
           font-size: 18px;
           margin-right: 20px;
         }
 
-        &:hover{
+        &:hover {
           background-color: $light-grey;
         }
       }
